@@ -168,7 +168,7 @@ class Haruka_Airwallex_Alipay {
                         'last_name' => $params['clientdetails']['lastname'],
                         'phone_number' => $params['clientdetails']['phonenumber'],
                     ],
-                    'descriptor' => $params["description"],
+                    'descriptor' => "invoiceID: " . $params['invoiceid'],
                     'request_id' => $this->generateUUID(),
                     'return_url' => $params['systemurl'] . 'viewinvoice.php?id=' . $params['invoiceid'],
                     'metadata' => [
